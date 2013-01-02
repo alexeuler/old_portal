@@ -1,0 +1,29 @@
+<%content_for :head do%>
+<h3>Войти</h3>
+<%end%>
+
+<%# :url => session_path(resource_name)%>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div class="modal-innerbody">
+    <%= f.error_messages :header_message=>'Ошибки при заполнении формы:', :message => "", :header_tag => :p, :class=>'alert alert-error'%>
+
+  <table class="edit_table">
+    <tr>
+      <td><%=f.label 'Имя / Email'%></td>
+      <td><%=f.text_field :login%></td>
+    </tr>
+    <tr>
+      <td><%=f.label :Пароль%></td>
+      <td><%=f.password_field :password%></td>
+    </tr>
+  </table>
+  <%= render "devise/shared/links" %>
+</div>
+  <div class="modal-footer">
+  <%= render "devise/shared/social" %>
+  <%=f.submit "Войти", :class=>'btn btn-primary'%>
+</div>
+  <%end%>
+
+
+

@@ -1,0 +1,20 @@
+
+.body_container
+{
+    position:relative;
+    background-color:$bodyBackground; 
+    @include box-shadow(0px 0px 10px 2px #888);
+    @include border-radius(0px 0px 20px 20px / 0px 0px 40px 40px);
+    width:$globalWidth;
+    padding:20px 0px;
+}
+
+.body {
+    width:$globalWidth*0.95;
+    @include center-block();
+}
+
+
+
+
+

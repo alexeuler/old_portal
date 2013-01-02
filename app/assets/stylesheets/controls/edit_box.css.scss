@@ -1,0 +1,31 @@
+/* input[type="text"], input[type="email"],input[type="password"], .combo_edit_box
+{
+    font-size:1em;
+    -moz-border-radius: 15px; 
+    border-radius: 15px; 
+    padding:0px 12px; 
+    border:1px solid #b5b5b5; 
+    width:370px; height:30px;
+    outline:none;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+
+    background: #ffffff; 
+    background: -moz-linear-gradient(top, #f4f2eb 0%, #ffffff 64%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f2eb), color-stop(64%,#ffffff)); 
+    background: -webkit-linear-gradient(top, #f4f2eb 0%,#ffffff 64%);
+    background: -o-linear-gradient(top, #f4f2eb 0%,#ffffff 64%);
+    background: -ms-linear-gradient(top, #f4f2eb 0%,#ffffff 64%);
+    background: linear-gradient(to bottom, #f4f2eb 0%,#ffffff 64%);
+}
+
+input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus, .combo_edit_box:focus
+{
+    -webkit-box-shadow: 0 0 5px #0089bd; 
+    -moz-box-shadow: 0 0 5px #0089bd;
+    box-shadow: 0 0 5px #0089bd;
+    border:1px solid #0089bd;
+}
+*/

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Portal</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="global_container">
+    <div class="centered_container">
+      <div class="logo">
+	<%= image_tag "items.png", :alt=>"Добро пожаловать на информационный портал Солнцево!" %>
+      </div>
+      <%=tabs(flash[:controller_tab_selected],{'Главная'=>'/','Форум'=>'/boards', 'Развлечения'=>'/', 'История'=>'/','Работа сайта'=>'/'},render('login_panel/show'))%>
+<div class="body_container">
+  <div class="body">
+    <p><%= notice %></p>
+    <p><%= alert %></p>
+    <%= yield %>
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-body " style='padding:0px;'>
+  
+</div>
+  </div>
+</body>
+</html>

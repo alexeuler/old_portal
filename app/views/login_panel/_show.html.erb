@@ -1,0 +1,10 @@
+<li class='login_panel'>
+  <%if user_signed_in?%>
+    <%=link_to("<span>#{current_user.name}</span>".html_safe, '#', :class=>"")%>
+
+    <%=link_to("<span>Выйти</span>".html_safe, destroy_user_session_path, :method => :delete, :class=>"")%>
+    <%else%>
+    <%=link_to("<span>Войти</span>".html_safe, new_user_session_path, :class=>'tabs_button login_link')%>
+
+    <%end%>
+</li>

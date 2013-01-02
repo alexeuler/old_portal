@@ -1,0 +1,15 @@
+
+<%=form_for(@board_group) do |f|%>
+<table class="edit_table">
+  <tr>
+    <td><%=f.label :name%></td>
+    <td><%=f.text_field :name, :class=>'wide'%></td>
+  </tr>
+  <tr>
+    <td><%=f.label :item_order%></td>
+    <td><%=f.text_field :item_order, :class=>'wide'%></td>
+  </tr>
+</table>
+  <br/>
+  <%=f.submit :class=>'btn btn-primary'%>
+<% end %>

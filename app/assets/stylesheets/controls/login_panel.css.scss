@@ -1,0 +1,53 @@
+// Place all the styles related to the LoginPanel controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.login_panel {
+float:right;
+padding:0px 15px 0px 0px;
+}
+
+.login_panel > a
+{
+display:block;
+font-size:20px;
+text-align:right;
+line-height:24px;
+}
+
+.login_panel > a:hover
+{
+font-size:20px;
+}
+
+
+.login_link
+{
+line-height:40px !important;
+}
+
+.social_auth{
+float:left;
+line-height:0;
+}
+
+.modal-innerbody{
+padding:16px 16px 0px 16px;
+}
+
+.social{
+display:inline-block;
+@include size(32px,32px);
+background-image: image_url('items.png');
+overflow:hidden;
+outline:none;
+&.vk{
+    background-position:-46px -7px;
+}
+
+&.fb{
+    background-position:-7px -7px;
+}
+
+}
+

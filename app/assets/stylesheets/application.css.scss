@@ -1,0 +1,54 @@
+@import 'before_bootstrap';
+@import 'bootstrap';
+@import 'shared/index';
+@import 'controls/index';
+@import 'index';
+
+
+input[type="text"], input[type="email"],input[type="password"], .combo_edit_box
+{
+    @include border-radius(15px);
+    padding:7px 15px 7px 15px;
+    &.wide
+    {
+	width:300px;
+    }
+}
+
+.global_container
+{
+width:100%;
+min-height:1200px;
+background-image: image_url('global_container_background.png');
+background-color:#f8f8f8;
+background-repeat:repeat-x;
+//padding:40px 0px 40px 0px;
+}
+
+
+.centered_container
+{
+margin: 0 auto;
+position:relative;
+text-align:left;
+width:$globalWidth;
+}
+
+.logo
+{
+margin: 0 auto;
+position:relative;
+width:1010px;
+height:218px;
+overflow:hidden;
+}
+
+.logo img
+{
+position:absolute;
+max-width:none;
+top:-170px;
+left:0px;
+}
+
+

@@ -1,0 +1,46 @@
+@import url(http://fonts.googleapis.com/css?family=Scada:400italic,700italic,400,700&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+
+$serifFontFamily: Scada, Georgia, "Times New Roman", Times, serif;
+$sansFontFamily: "Open Sans", Helvetica, Arial, sans-serif;
+$beige:#f4f2eb;
+$lightBlue:#80c3e7;
+$evenItemColor:#fcfbf9;
+$oddItemColor:#f0ddd6;
+$bodyBackground: $beige;
+$globalWidth:1000px;
+
+$baseFontFamily: $serifFontFamily;
+$baseFontSize:18px;
+
+$altFontFamily:$sansFontFamily;
+
+$btnPrimaryBackground:darken($lightBlue, 20%);
+$btnPrimaryBackgroundHighlight:darken($btnPrimaryBackground, 20%);
+
+
+.modal{
+    width:410px !important;
+    margin: -250px 0 0 -180px !important;
+    form{margin:0px;}
+}
+
+.modal-body{
+    max-height:500px !important;
+}
+
+
+.btn
+{
+height:32px;
+}
+
+@mixin gradient-vertical-noie($startColor: #555, $endColor: #333) {
+  background-color: mix($startColor, $endColor, 62.5%);
+  background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(to bottom, $startColor, $endColor); // Standard, IE10
+  background-repeat: repeat-x;
+}

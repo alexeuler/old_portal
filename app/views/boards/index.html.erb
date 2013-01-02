@@ -1,0 +1,55 @@
+<% if flash[:notice]%>
+  <p> <%=flash[:notice] %> </p>
+<% end %>
+
+<%is_admin=admin?%>
+
+<% @board_groups.each do |bg|%>
+  <div class="header">
+    <%= bg.name %>
+    <%if is_admin%>
+      <%= link_to 'Edit', edit_board_group_path(bg) %>
+      <%= link_to 'Delete', bg, :confirm => 'Are you sure?', :method => :delete %>
+      <%= link_to "Create Board", new_board_path(:board_group_id=>bg.id)%>
+      <%end%>
+  </div>
+  <br/>
+  <div class="board_items">
+    <%odd_even_switch=0
+      counter=1
+      boards_number=bg.boards.count
+      bg.boards.each do |b|
+	odd_even_switch=1-odd_even_switch
+	if odd_even_switch==1 
+	  odd_even_tag='even' 
+	else 
+	  odd_even_tag='odd'
+	end
+	%>
+
+    
+
+    <div class="board_item <%=odd_even_tag%> <%='first' if counter == 1%> <%='last' if counter == boards_number%>">
+      <div class="board_item_name">
+	<%= link_to b.name, topic_path(b) %>
+	<%if is_admin%>
+	    <%= link_to 'Edit', edit_board_path(b) %>
+	    <%= link_to 'Delete', b, :confirm => 'Are you sure?', :method => :delete %> 
+	    <%end%>
+
+      </div>
+      <div class="board_item_desc">
+	<%= b.description %>
+      </div>
+      <%counter+=1%>
+    </div>
+<% end %>
+</div>
+
+<br/>
+<% end %>
+
+
+<%if is_admin%> 
+  <%= link_to "Create Group", new_board_group_path%>
+  <%end%>

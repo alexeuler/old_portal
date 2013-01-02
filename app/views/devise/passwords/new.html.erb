@@ -1,0 +1,22 @@
+
+<%content_for :head do%>
+<h3>Восстановление пароля</h3>
+<%end%>
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  <div class="modal-innerbody">
+    <%= f.error_messages :header_message=>'Ошибки при заполнении формы:', :message => "", :header_tag => :p, :class=>'alert alert-error'%>
+    <table class="edit_table">
+      <tr>
+	<td><%= f.label :email %></td>
+	<td><%= f.text_field :email %></td>
+      </tr>
+    </table>
+    <%= render "devise/shared/links" %>
+  </div>
+  <div class="modal-footer">
+    <%= render "devise/shared/social" %>
+    <%= f.submit "Отправить", :class=>'btn btn-primary' %>
+  </div>
+<% end %>
+

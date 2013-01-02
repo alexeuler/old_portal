@@ -1,0 +1,21 @@
+.combo_edit_box
+{
+    padding-right:32px;
+    width:350px;
+}
+
+.combo_button div
+{
+float:right;
+position:relative;
+left:-35px;
+top:9px;
+width:30px;
+height:20px;
+background: image_url('items.png') -5px -970px;
+}
+
+.combo_button:hover, .combo_button div:hover
+{
+cursor:pointer;
+}

@@ -1,0 +1,45 @@
+.header
+{
+    @include border-radius(15px);
+    @include box-shadow(0px 0px 10px 2px #888);
+    @include gradient-vertical-noie($evenItemColor,$oddItemColor);
+
+    line-height:30px;
+    vertical-align:middle;
+    font-size:24px;
+    padding:0px 10px;
+}
+
+.board_items
+{
+    @include box-shadow(0px 0px 5px 2px #888);
+    margin:0px 10px;
+}
+
+.board_item
+{
+    border-top:1px solid gray;
+    border-bottom:1px solid gray;
+    padding:10px 10px;
+}
+
+.board_item.even
+{
+    background: $evenItemColor;
+}
+
+.board_item.odd
+{
+    background: $oddItemColor;
+}
+
+.board_item_name
+{
+    font-size:24px;
+}
+
+.board_item_desc
+{
+    font-style:italic;
+}
+

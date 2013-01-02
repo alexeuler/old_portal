@@ -1,0 +1,22 @@
+<%content_for :head do%>
+<h3>Изменение пароля</h3>
+<% end %>
+
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+  <div class="modal-innerbody">
+    <%= devise_error_messages! %>
+    <%= f.hidden_field :reset_password_token %>
+    <table class="edit_table">
+      <tr>
+	<td><%= f.label :password, "Новый пароль" %></td>
+	<td><%= f.password_field :password %></td>
+      </tr>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <%= f.submit "Отправить", :class=>'btn btn-primary' %>
+  </div>
+<% end %>
+
+

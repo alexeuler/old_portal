@@ -1,0 +1,53 @@
+.tabs {
+    @include box-shadow(0px 0px 10px 2px #888);
+    @include border-radius(15px);
+    @include center-block();
+    @include size(50px,$globalWidth - 5px);
+    background: $bodyBackground;
+    position:relative;
+    list-style: none;
+    padding:0px 0px 0px 5px;
+
+    li{
+	display: inline;
+    }
+
+    a {@include transition(color 0.2s ease-in);}
+    a, a:hover, a:visited, a:active
+    {
+	font-size:24px;
+	color:$black;
+	outline:none;
+	text-decoration:none;
+
+    }
+    a:hover{color:$blue;}
+} 
+
+
+.tabs_button
+{
+    position:relative; //For z-index to work
+    width:150px;
+    line-height:40px;
+    float: left;
+    display:block;
+    z-index:2;
+    text-align:center;
+    vertical-align:middle;
+    margin:5px 0px;
+}
+
+.tabs_button.selected
+{
+    @include border-radius(15px);
+    @include box-shadow(0px 0px 5px 2px #888);
+    @include gradient-vertical-noie($lightBlue,$blue);
+}
+
+.tabs_button.selected:hover{color:$black;}
+.tabs_button.pre_selected:hover{color:$black;}
+
+
+
+
