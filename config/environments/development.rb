@@ -29,7 +29,7 @@ Portal::Application.configure do
   :port               => 587,
   :domain             => 'gmail.com', #you can also use google.com
   :authentication     => :plain,
-  :user_name          => ENV['GMAIL_ACCOUNT']
+  :user_name          => ENV['GMAIL_ACCOUNT'],
   :password           => ENV['GMAIL_PASSWORD']
 }
   
